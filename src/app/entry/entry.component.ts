@@ -36,8 +36,8 @@ export class EntryComponent {
     this.entries = this.entryService.getAllEntries();
   }
 
-  deleteEntry(idNumber: string): void {
-    this.entryService.deleteEntry(idNumber);
+  deleteEntry(UUID: string): void {
+    this.entryService.deleteEntry(UUID);
     this.entries = this.entryService.getAllEntries();
   }
 }
