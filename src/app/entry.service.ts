@@ -29,6 +29,7 @@ export class EntryService {
     }
     const uuid = uuidv4();
     this.entries.push({ ...newEntry, UUID: uuid });
+    console.log(this.entries);
   }
   
   updateEntry(updatedEntry: any): void {
@@ -52,7 +53,7 @@ export class EntryService {
     }
   }
 
-  deleteEntry(idNumber: string): void {
-    this.entries = this.entries.filter((entry) => entry.idNumber !== idNumber);
+  deleteEntry(UUID: string): void {
+    this.entries = this.entries.filter((entry) => entry.UUID !== UUID);
   }
 }
